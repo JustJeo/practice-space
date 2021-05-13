@@ -16,8 +16,10 @@ document.getElementById("btn").addEventListener("click", timer)
   document.getElementById("demoText").innerHTML = results
   }
 
-document.getElementById("keyboard").addEventListener("click", board)
+document.getElementById("keyboard").addEventListener("keydown", board)
 
-  function board() {
-    
+  function board(event) {
+    if (event.ctrlKey && event.key === "j") {
+        document.getElementById("keyDemo").innerHTML = "You pressed a button combo on the keyboard to read this!"
+    }
   }
