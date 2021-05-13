@@ -1,3 +1,6 @@
+console.log("AYO! This is Jeo!")
+
+// Section 1
 document.getElementById("btn").addEventListener("click", timer)
 
   function timer () {
@@ -16,6 +19,7 @@ document.getElementById("btn").addEventListener("click", timer)
   document.getElementById("demoText").innerHTML = results
   }
 
+// Section 2
 document.getElementById("keyboard").addEventListener("keydown", board)
 
   function board(event) {
@@ -23,3 +27,20 @@ document.getElementById("keyboard").addEventListener("keydown", board)
         document.getElementById("keyDemo").innerHTML = "You pressed a button combo on the keyboard to read this!"
     }
   }
+
+
+// Section 3
+let modalBtn = document.getElementById("modal-btn")
+let modal = document.querySelector(".modal")
+let closeBtn = document.querySelector(".close-btn")
+modalBtn.onclick = function(){
+  modal.style.display = "block"
+}
+closeBtn.onclick = function(){
+  modal.style.display = "none"
+}
+window.onclick = function(e){
+  if(e.target == modal){
+    modal.style.display = "none"
+  }
+}
